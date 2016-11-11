@@ -1,0 +1,167 @@
+{
+  "definitions": {
+    "Shareholder": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "integer"
+          ]
+        },
+        "shareholder": {
+          "$ref": "#/definitions/OrganizationReference"
+        },
+        "shareholding": {
+          "type": "array",
+          "items": {
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0,
+                "maximum": 1
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "votingRights": {
+          "type": "array",
+          "items": {
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "enum": [
+                  "ordinary",
+                  "none",
+                  "restricted",
+                  "additional",
+                  "enhanced",
+                  null
+                ]
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "votingRightsDetails": {
+          "$ref": "#/definitions/StringNullVersioned"
+        }
+      }
+    },
+    "ShareholderUnversioned": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "integer"
+          ]
+        },
+        "shareholder": {
+          "$ref": "#/definitions/OrganizationReferenceUnversioned"
+        },
+        "shareholding": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "votingRights": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "ordinary",
+            "none",
+            "restricted",
+            "additional",
+            "enhanced",
+            null
+          ]
+        },
+        "votingRightsDetails": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "Organization": {
+      "properties": {
+        "shareholders": {
+          "type": "array",
+          "items": {
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/shareholderUnversioned"
+                },
+                "uniqueItems": true
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "OrganizationUnversioned": {
+      "properties": {
+        "shareholders": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/shareholderUnversioned"
+          },
+          "uniqueItems": true
+        }
+      }
+    }
+  }
+}

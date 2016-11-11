@@ -1,0 +1,76 @@
+{
+  "definitions": {
+    "Shareholder": {
+      "type": "object",
+      "title": "Shareholder",
+      "description": "A shareholder in an organization.",
+      "properties": {
+        "id": {
+          "title": "Shareholder ID",
+          "description": "A local identifier for this shareholder, unique within this block. This field is used to keep track of multiple revisions of a shareholder through the compilation from release to record mechanism.",
+          "type": [
+            "string",
+            "integer"
+          ],
+          "mergeStrategy": "overwrite"
+        },
+        "shareholder": {
+          "title": "Shareholder organization reference",
+          "description": "An organization reference pointing the entry in the parties section for the shareholding organization",
+          "$ref": "#/definitions/OrganizationReference"
+        },
+        "shareholding": {
+          "title": "Shareholding",
+          "description": "The percentage of shares held by the shareholder, expressed as a decimal value between 0 and 1",
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1,
+          "mergeStrategy": "ocdsVersion"
+        },
+        "votingRights": {
+          "title": "Shareholder voting rights",
+          "description": "Specify the type of voting rights associated with the shares held by the shareholder against the [voting rights codelist](http://standard.open-contracting.org/latest/en/schema/codelists/#voting-rights).",
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "ordinary",
+            "none",
+            "restricted",
+            "additional",
+            "enhanced",
+            null
+          ],
+          "mergeStrategy": "ocdsVersion"
+        },
+        "votingRightsDetails": {
+          "title": "Shareholder voting rights details",
+          "description": "Detailed information about the shareholder's voting rights. This field should be completed when the shareholder voting rights are restricted, additional or enhanced.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "mergeStrategy": "ocdsVersion"
+        }
+      }
+    },
+    "Organization": {
+      "properties": {
+        "shareholders": {
+          "title": "Organization shareholders",
+          "description": "A list of shareholders in the organization",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/shareholder"
+          },
+          "mergeStrategy": "ocdsVersion",
+          "uniqueItems": true
+        }
+      }
+    }
+  }
+}
