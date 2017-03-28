@@ -9,26 +9,23 @@
           "title": "Shareholder ID",
           "description": "A local identifier for this shareholder, unique within this block. This field is used to keep track of multiple revisions of a shareholder through the compilation from release to record mechanism.",
           "type": [
-            "string",
-            "integer"
-          ],
-          "mergeStrategy": "overwrite"
+            "string"
+          ]
         },
         "shareholder": {
-          "title": "Shareholder organization reference",
-          "description": "An organization reference pointing the entry in the parties section for the shareholding organization",
+          "title": "Shareholder organization reference.",
+          "description": "An organization reference pointing the entry in the parties section for the shareholding organization.",
           "$ref": "#/definitions/OrganizationReference"
         },
         "shareholding": {
           "title": "Shareholding",
-          "description": "The percentage of shares held by the shareholder, expressed as a decimal value between 0 and 1",
+          "description": "The percentage of shares held by the shareholder, expressed as a decimal value between 0 and 1.",
           "type": [
             "number",
             "null"
           ],
           "minimum": 0,
-          "maximum": 1,
-          "mergeStrategy": "ocdsVersion"
+          "maximum": 1
         },
         "votingRights": {
           "title": "Shareholder voting rights",
@@ -37,15 +34,8 @@
             "string",
             "null"
           ],
-          "enum": [
-            "ordinary",
-            "none",
-            "restricted",
-            "additional",
-            "enhanced",
-            null
-          ],
-          "mergeStrategy": "ocdsVersion"
+          "codelist": "votingRights.csv",
+          "openCodelist": false
         },
         "votingRightsDetails": {
           "title": "Shareholder voting rights details",
@@ -53,8 +43,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "mergeStrategy": "ocdsVersion"
+          ]
         }
       }
     },
@@ -62,13 +51,24 @@
       "properties": {
         "shareholders": {
           "title": "Organization shareholders",
-          "description": "A list of shareholders in the organization",
+          "description": "A list of shareholders in the organization: used to provide company ownership information for firms, primarily in the case of large and complex contracts, or Public Private Partnerships, that require disclosure of this information for certain bidders or awarded parties.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Shareholder"
           },
-          "mergeStrategy": "ocdsVersion",
           "uniqueItems": true
+        },
+        "beneficialOwnership":{
+          "type":"object",
+          "title":"Beneficial ownership",
+          "description":"This section can be used to record information concerning individuals or organisations with a beneficial ownership or control interests in this party. Where structured data is available, this section may be extended by embedding or linking to information modelled using the [Beneficial Ownership Data Standard (BODS)](https://github.com/openownership/data-standard).",
+          "properties":{
+            "description":{
+              "title":"Description",
+              "description":"A free text description of beneficial ownership or control arrangements.",
+              "type":"string"
+            }
+          }
         }
       }
     }
