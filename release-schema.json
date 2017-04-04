@@ -44,7 +44,14 @@
             "string",
             "null"
           ]
-        }
+        },
+		"notes": {
+			"title": "Shareholder notes",
+			"type": [
+				"string",
+				"null"
+			]
+		}
       }
     },
     "Organization": {
