@@ -47,6 +47,7 @@
         },
 		"notes": {
 			"title": "Shareholder notes",
+			"description": "Additional notes on this shareholder. This field should be used to provide details on any caps on equity transfer, or lock-in arrangements, applicable to this shareholder.",
 			"type": [
 				"string",
 				"null"
