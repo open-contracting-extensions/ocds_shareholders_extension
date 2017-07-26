@@ -16,7 +16,7 @@ The shareholder building block provides a way to:
 
 * Link to the organization details of the shareholder
 * Describe the amount of shares held by the shareholder
-* Describe the voting rights assoicated with the shareholding
+* Describe the voting rights associated with the shareholding
 
 ```eval_rst
 .. extensiontable::
