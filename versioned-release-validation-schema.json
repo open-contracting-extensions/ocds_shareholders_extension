@@ -137,7 +137,7 @@
               "value": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/definitions/shareholderUnversioned"
+                  "$ref": "#/definitions/ShareholderUnversioned"
                 },
                 "uniqueItems": true
               },
@@ -157,7 +157,7 @@
         "shareholders": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/shareholderUnversioned"
+            "$ref": "#/definitions/ShareholderUnversioned"
           },
           "uniqueItems": true
         }
