@@ -8,7 +8,7 @@ The extension introduces a new ```Shareholder``` building block and extends the 
 
 ## Shareholders Field
 
-The ```Organization/shareholders``` field is an array of ```Shareholder``` building blocks, describing the shareholders for the organization. 
+The ```Organization/shareholders``` field is an array of ```Shareholder``` building blocks, describing the shareholders for the organization.
 
 ## Shareholder Building Block
 
