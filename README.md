@@ -11,3 +11,7 @@ Because each owner mentioned in the shareholders array should also gain an entry
 This extension also includes a 'stub' entry for recording beneficial ownership information against a party. 
 
 At present this includes space for free-text description of ownership and control structures, but this may be further extended with structured beneficial ownership information drawing on the draft [Beneficial Ownership Data Standard](https://github.com/openownership/data-standard).
+
+## Issues
+
+Report issues for this extension in the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions/issues), putting the extension's name in the issue's title.
