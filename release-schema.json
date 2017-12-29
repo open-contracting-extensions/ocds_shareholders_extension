@@ -35,7 +35,15 @@
             "null"
           ],
           "codelist": "votingRights.csv",
-          "openCodelist": false
+          "openCodelist": false,
+          "enum": [
+            "ordinary",
+            "none",
+            "restricted",
+            "additional",
+            "enhanced",
+            null
+          ]
         },
         "votingRightsDetails": {
           "title": "Shareholder voting rights details",
@@ -45,14 +53,14 @@
             "null"
           ]
         },
-		"notes": {
-			"title": "Shareholder notes",
-			"description": "Additional notes on this shareholder. This field should be used to provide details on any caps on equity transfer, or lock-in arrangements, applicable to this shareholder.",
-			"type": [
-				"string",
-				"null"
-			]
-		}
+        "notes": {
+          "title": "Shareholder notes",
+          "description": "Additional notes on this shareholder. This field should be used to provide details on any caps on equity transfer, or lock-in arrangements, applicable to this shareholder.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
       }
     },
     "Organization": {
@@ -66,15 +74,15 @@
           },
           "uniqueItems": true
         },
-        "beneficialOwnership":{
-          "type":"object",
-          "title":"Beneficial ownership",
-          "description":"This section can be used to record information concerning individuals or organizations with a beneficial ownership or control interests in this party. Where structured data is available, this section may be extended by embedding or linking to information modelled using the [Beneficial Ownership Data Standard (BODS)](https://github.com/openownership/data-standard).",
-          "properties":{
-            "description":{
-              "title":"Description",
-              "description":"A free text description of beneficial ownership or control arrangements.",
-              "type":"string"
+        "beneficialOwnership": {
+          "type": "object",
+          "title": "Beneficial ownership",
+          "description": "This section can be used to record information concerning individuals or organizations with a beneficial ownership or control interests in this party. Where structured data is available, this section may be extended by embedding or linking to information modelled using the [Beneficial Ownership Data Standard (BODS)](https://github.com/openownership/data-standard).",
+          "properties": {
+            "description": {
+              "title": "Description",
+              "description": "A free text description of beneficial ownership or control arrangements.",
+              "type": "string"
             }
           }
         }
