@@ -4,6 +4,9 @@
       "type": "object",
       "title": "Shareholder",
       "description": "A shareholder in an organization.",
+      "required": [
+        "id"
+      ],
       "properties": {
         "id": {
           "title": "Shareholder ID",
