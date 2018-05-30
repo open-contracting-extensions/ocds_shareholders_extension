@@ -1,6 +1,6 @@
 {
   "name": {
-    "en": "ocds-shareholders-extension"
+    "en": "Shareholders"
   },
   "description": {
     "en": "The shareholders extension can be used to attach company ownership details to each party in the parties array."
