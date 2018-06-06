@@ -3,7 +3,7 @@
     "en": "ocds-shareholders-extension"
   },
   "description": {
-    "en": "The shareholders extension can be used to attach company ownership details to each party in the parties array."
+    "en": "Adds company ownership fields to the organization object used in the parties array."
   },
   "documentationUrl": {
     "en": "https://github.com/open-contracting/ocds-shareholders-extension"
