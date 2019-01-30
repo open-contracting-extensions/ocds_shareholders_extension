@@ -12,6 +12,52 @@ This extension also includes a 'stub' entry for recording beneficial ownership i
 
 At present this includes space for free-text description of ownership and control structures, but this may be further extended with structured beneficial ownership information drawing on the draft [Beneficial Ownership Data Standard](https://github.com/openownership/data-standard).
 
+## Example
+
+```json
+{
+  "parties": [
+    {
+      "id": "MEGA",
+      "name": "Mega Consortium",
+      "shareholders": [
+        {
+          "id": "1",
+          "shareholder": {
+            "id": "AHL",
+            "name": "Alpha Holdings Ltd"
+          },
+          "shareholding": 0.67,
+          "votingRights": "additional",
+          "votingRightsDetails": "Alpha Holdings Ltd. is entitled to 5 votes per share.",
+          "notes": "Alpha Holdings Ltd. must maintain a minimum shareholding of 30% in the project company until 10 years from the date of commissioning have elapsed."
+        },
+        {
+          "id": "2",
+          "shareholder": {
+            "id": "BET",
+            "name": "Beta Investment Company Ltd"
+          },
+          "shareholding": 0.33,
+          "votingRights": "ordinary"
+        }
+      ]
+    },
+    {
+      "id": "AHL",
+      "name": "Alpha Holdings Ltd",
+      "beneficialOwnership": {
+        "description": "Alpha Holdings is wholly controlled by Alpha Trust"
+      }
+    },
+    {
+      "id": "BET",
+      "name": "Beta Investment Company Ltd"
+    }
+  ]
+}
+```
+
 ## Issues
 
 Report issues for this extension in the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions/issues), putting the extension's name in the issue's title.
