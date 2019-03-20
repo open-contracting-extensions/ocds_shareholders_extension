@@ -13,7 +13,8 @@
           "description": "A local identifier for this shareholder, unique within this block. This field is used to keep track of multiple revisions of a shareholder through the compilation from release to record mechanism.",
           "type": [
             "string"
-          ]
+          ],
+          "minLength": 1
         },
         "shareholder": {
           "title": "Shareholder organization reference.",
