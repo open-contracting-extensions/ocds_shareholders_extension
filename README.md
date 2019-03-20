@@ -67,7 +67,12 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 ### 2019-03-20
 
 * Add `"minLength": 1` on required string fields.
+* Make `Organization.beneficialOwnership` non-nullable (undo earlier change).
 
 ### 2018-05-08
 
 * Make `Shareholder.id` required to support revision tracking and [list merging](http://standard.open-contracting.org/latest/en/schema/merging/#lists)
+
+### 2018-01-29
+
+* Make `Organization.beneficialOwnership` nullable.
