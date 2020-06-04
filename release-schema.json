@@ -33,7 +33,7 @@
         },
         "votingRights": {
           "title": "Shareholder voting rights",
-          "description": "Specify the type of voting rights associated with the shares held by the shareholder against the voting rights codelist.",
+          "description": "The type of voting rights associated with the shares held by the shareholder.",
           "type": [
             "string",
             "null"
