@@ -6,11 +6,6 @@ For example, in Public Private Partnerships processes, companies are often requi
 
 Because each owner mentioned in the shareholders array should also gain an entry in the `parties` array, it is possible to use this extension to build up information on corporate ownership networks involved in a contracting process.
 
-## Beneficial ownership
-
-This extension also includes a "stub" entry for recording beneficial ownership information against a party.
-
-At present this includes space for free-text description of ownership and control structures, but this may be further extended with structured beneficial ownership information drawing on the draft [Beneficial Ownership Data Standard](https://github.com/openownership/data-standard).
 
 ## Example
 
@@ -44,13 +39,6 @@ At present this includes space for free-text description of ownership and contro
       ]
     },
     {
-      "id": "AHL",
-      "name": "Alpha Holdings Ltd",
-      "beneficialOwnership": {
-        "description": "Alpha Holdings is wholly controlled by Alpha Trust"
-      }
-    },
-    {
       "id": "BET",
       "name": "Beta Investment Company Ltd"
     }
@@ -63,6 +51,10 @@ At present this includes space for free-text description of ownership and contro
 Report issues for this extension in the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions/issues), putting the extension's name in the issue's title.
 
 ## Changelog
+
+### 2021-05-24
+
+* Remove `Organization.beneficialOwnership`.
 
 ### 2020-04-24
 
