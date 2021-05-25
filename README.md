@@ -1,4 +1,4 @@
-# Shareholder and ownership details
+# Shareholder details
 
 The shareholder extension can be used to provide details of the owners of parties involved in a contracting process.
 
