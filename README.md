@@ -1,11 +1,10 @@
-# Shareholder details
+# Shareholders
 
-The shareholder extension can be used to provide details of the owners of parties involved in a contracting process.
+Adds company ownership fields to the organization object used in the parties array.
 
-For example, in Public Private Partnerships processes, companies are often required to disclose information on their ownership structures when bidding, and when the contract is awarded, information on the ownership of a Special Purpose Vehicle (SPV) operating the contract may need to be kept up to date during project implementation.
+For example, when bidding in Public Private Partnerships, companies can be required to disclose their ownership information. After a contract is signed and during project implementation, the ownership information of the Special Purpose Vehicle (SPV) that is operating the contract might need to be updated.
 
-Because each owner mentioned in the shareholders array should also gain an entry in the `parties` array, it is possible to use this extension to build up information on corporate ownership networks involved in a contracting process.
-
+Since each owner mentioned in the `shareholders` array should have a corresponding entry in the `parties` array, it is possible to use this extension to describe multiple levels of corporate ownership.
 
 ## Example
 

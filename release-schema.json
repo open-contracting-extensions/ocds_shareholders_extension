@@ -2,26 +2,26 @@
   "definitions": {
     "Shareholder": {
       "type": "object",
-      "title": "Shareholder",
-      "description": "A shareholder in an organization.",
+      "title": "Shareholding",
+      "description": "A shareholding in an organization.",
       "required": [
         "id"
       ],
       "properties": {
         "id": {
-          "title": "Shareholder ID",
-          "description": "A local identifier for this shareholder, unique within this block. This field is used to keep track of multiple revisions of a shareholder through the compilation from release to record mechanism.",
+          "title": "ID",
+          "description": "A local identifier for this shareholding, unique within this array.",
           "type": "string",
           "minLength": 1
         },
         "shareholder": {
-          "title": "Shareholder organization reference.",
-          "description": "An organization reference pointing the entry in the parties section for the shareholding organization.",
+          "title": "Shareholder",
+          "description": "The organization holding the share.",
           "$ref": "#/definitions/OrganizationReference"
         },
         "shareholding": {
           "title": "Shareholding",
-          "description": "The percentage of shares held by the shareholder, expressed as a decimal value between 0 and 1.",
+          "description": "The percentage of the organization's shares held by the shareholder, expressed as a decimal between 0 and 1.",
           "type": [
             "number",
             "null"
@@ -30,8 +30,8 @@
           "maximum": 1
         },
         "votingRights": {
-          "title": "Shareholder voting rights",
-          "description": "The type of voting rights associated with the shares held by the shareholder.",
+          "title": "Voting rights",
+          "description": "The type of voting rights associated with the shareholder's shares.",
           "type": [
             "string",
             "null"
@@ -48,8 +48,8 @@
           ]
         },
         "votingRightsDetails": {
-          "title": "Shareholder voting rights details",
-          "description": "Detailed information about the shareholder's voting rights. This field should be completed when the shareholder voting rights are restricted, additional or enhanced.",
+          "title": "Voting rights details",
+          "description": "Detailed information about the voting rights associated with the shareholder's shares: for example, when the shareholder voting rights are restricted, additional or enhanced.",
           "type": [
             "string",
             "null"
@@ -57,8 +57,8 @@
           "minLength": 1
         },
         "notes": {
-          "title": "Shareholder notes",
-          "description": "Additional notes on this shareholder. This field should be used to provide details on any caps on equity transfer, or lock-in arrangements, applicable to this shareholder.",
+          "title": "Notes",
+          "description": "Additional notes on the shareholding or shareholder: for example, details on any caps on equity transfer, or lock-in arrangements, applicable to the shareholder.",
           "type": [
             "string",
             "null"
@@ -71,8 +71,8 @@
     "Organization": {
       "properties": {
         "shareholders": {
-          "title": "Organization shareholders",
-          "description": "A list of shareholders in the organization: used to provide company ownership information for firms, primarily in the case of large and complex contracts, or Public Private Partnerships, that require disclosure of this information for certain bidders or awarded parties.",
+          "title": "Shareholdings",
+          "description": "Shareholdings in the organization: used to provide company ownership information for firms, primarily in the case of large and complex contracts, like public private partnerships, that require disclosure of this information by bidders or suppliers.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Shareholder"
