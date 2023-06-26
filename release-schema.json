@@ -1,9 +1,9 @@
 {
   "definitions": {
     "Shareholder": {
-      "type": "object",
       "title": "Shareholding",
       "description": "A shareholding in an organization.",
+      "type": "object",
       "required": [
         "id"
       ],
