@@ -51,6 +51,10 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 
 ## Changelog
 
+### 2023-12-04
+
+* Update and clarify `Shareholder.shareholding` field description.
+
 ### 2021-05-24
 
 * Remove `Organization.beneficialOwnership`.
