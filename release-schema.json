@@ -21,7 +21,7 @@
         },
         "shareholding": {
           "title": "Shareholding",
-          "description": "The percentage of the organization's shares held by the shareholder, expressed as a decimal proportion between 0 and 1.",
+          "description": "The proportion of the organization's shares held by the shareholder, expressed as a decimal between 0 and 1.",
           "type": [
             "number",
             "null"
